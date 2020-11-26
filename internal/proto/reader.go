@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/go-redis/redis/v8/internal/util"
+	"github.com/freeliver/redis/v8/internal/util"
 )
 
 const (

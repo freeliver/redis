@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/go-redis/redis/v8"
-	"github.com/go-redis/redis/v8/extra/redisotel"
+	"github.com/freeliver/redis/v8/extra/redisotel"
 	"go.opentelemetry.io/otel"
 	meterStdout "go.opentelemetry.io/otel/exporters/metric/stdout"
 	traceStdout "go.opentelemetry.io/otel/exporters/trace/stdout"
