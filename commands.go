@@ -3,6 +3,7 @@ package redis
 import (
 	"context"
 	"errors"
+	"fmt"
 	"io"
 	"time"
 
@@ -2701,6 +2702,7 @@ func (c cmdable) GeoRadiusStore(
 	ctx context.Context, key string, longitude, latitude float64, query *GeoRadiusQuery,
 ) *IntCmd {
 	args := geoLocationArgs(query, "georadius", key, longitude, latitude)
+	fmt.Println(args)
 	cmd := NewIntCmd(ctx, args...)
 	if query.Store == "" && query.StoreDist == "" {
 		cmd.SetErr(errors.New("GeoRadiusStore requires Store or StoreDist"))
